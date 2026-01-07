@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="icon" href="icon.png" />
+    <title>ROBEJR.</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ==========================================
+                    Header
+    =========================================== -->
+    <header class="header">
+      <!-- <a href="" class="logo"><img src="logo-removebg-preview.png" alt="" /></a> -->
+      <a href="#" class="logo">ROBE<span>JR.</span></a>
+
+      <nav class="navbar">
+        <button
+          id="dark-mode"
+          class="darkmode"
+          aria-label="Close mobile navigation"
+        >
+          <i class="bx bx-moon"></i>
+        </button>
+        <a href="#home" class="nav-item active">Home</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#services" class="nav-item">Services</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+      <!-- <button id="login-btn" class="login-btn">
+        <i class="fa-solid fa-user"></i>
+      </button> -->
+      <div class="side">
+        <button class="login-btn"><i class="fa-solid fa-user"></i></button>
+        <i class="bx bx-menu" id="menu-icon"></i>
+      </div>
+    </header>
+    <div class="wrapper">
+      <dix class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </dix>
+
+      <div class="form-box login">
+        <h2>Login</h2>
+        <form action="https://formspree.io/f/xkogpvkv" method="POST">
+          <div class="input-user">
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            <input name="email" type="email" placeholder=" " required />
+            <label for="">Email</label>
+          </div>
+
+          <div class="input-user">
+            <span class="icon"><i class="fa-solid fa-lock"></i></span>
+            <input name="name" type="password" placeholder=" " required />
+            <label for="">Password</label>
+          </div>
+          <div class="remember">
+            <label><input type="checkbox" />Remember me</label>
+            <a href="#">Forget Password?</a>
+          </div>
+          <button type="submit" value="Send" class="btn_log">Login</button>
+          <div class="ask">
+            <p>
+              Don't have an account?<a href="#" class="register_click"
+                >Register</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <main>
+      <!-- ==========================================
+                    Home Section
+    =========================================== -->
+      <section class="home" id="home">
+        <div class="home-content">
+          <h3>Hello World, My name is</h3>
+          <h1>Roberto B. Guevarra Jr.</h1>
+          <h3>And I am a BSIT</h3>
+          <h3>And I'm a <span class="multiple-text"></span></h3>
+          <div class="social-media">
+            <a
+              href="https://www.facebook.com/robertoguevarrajr/"
+              target="_blank"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+            <a href="https://github.com/robertIT1A" target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a href="https://www.instagram.com/rbrt_gvrr/" target="_blank"
+              ><i class="bx bxl-instagram-alt"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/guevarra-roberto-17331a3a4/"
+              target="_blank"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="home-img">
+          <img src="profile-removebg-preview.png" alt="home" />
+        </div>
+      </section>
+
+      <!-- ==========================================
+                    About Section
+    =========================================== -->
+      <section id="about" class="section fade-in">
+        <div class="container">
+          <div class="about">
+            <div class="crop-look slide-in-left">
+              <!-- waving robot -->
+              <spline-viewer
+                class="robot-3d"
+                url="https://prod.spline.design/Go2NooieOuQjUgzE/scene.splinecode"
+              ></spline-viewer>
+            </div>
+
+            <div class="mid">
+              <h2 class="section-title fade-in">✨ About</h2>
+              <p class="bio fade-in">
+                A tech enthusiast and 1st-year BS Information Technology student
+                at
+                <strong>Dalubhasan ng Lungsod ng Lucena</strong>, I am driven by
+                the logic and creativity of the web. As an aspiring
+                <strong>Junior Web Developer</strong>, I don't just wait for the
+                curriculum to catch up; I spend my time building responsive
+                interfaces and exploring the latest frameworks. I am currently
+                seeking an internship where I can contribute my foundational
+                coding skills to real-world projects while learning from
+                seasoned industry professionals.
+              </p>
+            </div>
+
+            <!-- looking robot -->
+            <div class="crop">
+              <spline-viewer
+                class="looking-robot slide-in-right"
+                url="https://prod.spline.design/6AgfUpHrbZznF8bY/scene.splinecode"
+              ></spline-viewer>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+                    SErvices Section
+    =========================================== -->
+      <section id="services" class="section fade-in">
+        <div class="container">
+          <h2 class="section-title">My <span>Services </span></h2>
+          <div class="services .scale-in">
+            <div class="tools">
+              <div class="pic">
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <h3>Tools</h3>
+              <p>
+                Leveraged HTML5 for semantic content structuring and CSS3 for
+                responsive design to develop a visually engaging and
+                user-friendly website.
+              </p>
+            </div>
+            <div class="tools">
+              <div class="pic">
+                <i class="fa-brands fa-python"></i>
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <h3>Language</h3>
+              <p>
+                As a 1st-year BSIT student, I bridge the gap between user
+                experience and technical efficiency. I utilize JavaScript to
+                bring web interfaces to life and Python to solve backend
+                challenges and automate workflows.
+              </p>
+            </div>
+          </div>
+          <p class="bio fad-in">
+            Aspiring Web Developer proficient in HTML, CSS, and JS for front-end
+            experiences, and Python for automation and logic.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==========================================
+                  Projects Section
+    =========================================== -->
+      <section class="portfolio" id="projects">
+        <div class="container">
+          <h2 class="section-title fade-in">Latest <span>Project</span></h2>
+          <!-- first -->
+          <div class="portfolio-container">
+            <div class="portfolio-box slide-in-left">
+              <img
+                src="fb.png"
+                alt="portfolio"
+                style="
+                  background: linear-gradient(
+                    rgba(0, 0, 0, 0.01),
+                    rgba(0, 0, 0, 0.5)
+                  );
+                  background-size: 350px 500px;
+                  filter: brightness(95%);
+                "
+              />
+              <div class="portfolio-layer">
+                <h4>Facebook Profile</h4>
+                <p>
+                  IT Paradigm first Web_Dev_Challenge using Html and Css to
+                  create Facebook Page
+                </p>
+                <a href="https://robertit1a.github.io/WEB_DEV_Project/"
+                  ><i class="bx bx-link-external"></i
+                ></a>
+              </div>
+            </div>
+            <!-- 2nd -->
+            <div class="portfolio-box scale-in">
+              <img
+                src="PAGE.png"
+                alt="portfolio"
+                style="background-position: center"
+              />
+              <div class="portfolio-layer">
+                <h4>Profile Page</h4>
+                <p>
+                  This is my first HTML with combination of CSS. My task is to
+                  make a profile page structure (Portfolio) and enhance it using
+                  CSS
+                </p>
+                <a href="https://robertit1a.github.io/WEB_DEV_Profile_Page/"
+                  ><i class="bx bx-link-external"></i
+                ></a>
+              </div>
+            </div>
+            <!-- 3rd -->
+            <div class="portfolio-box slide-in-right">
+              <img src="login.png" alt="portfolio" />
+              <div class="portfolio-layer">
+                <h4>Nature Login</h4>
+                <p>
+                  I'm building an interactive login system using JavaScript to
+                  transform a static interface into a fully functional,
+                  user-driven application.
+                </p>
+                <a href="https://robertit1a.github.io/Login/"
+                  ><i class="bx bx-link-external"></i
+                ></a>
+              </div>
+            </div>
+            <!-- 4th -->
+            <div class="portfolio-box slide-in-left">
+              <img src="For_someone.png" alt="portfolio" />
+              <div class="portfolio-layer">
+                <h4>For Someone</h4>
+                <p>I dedicated this website to someone whom I admire.</p>
+                <a href="https://robertit1a.github.io/For_Someone/"
+                  ><i class="bx bx-link-external"></i
+                ></a>
+              </div>
+            </div>
+            <!-- 5th -->
+            <div class="portfolio-box scale-in">
+              <img src="js.png" alt="portfolio" />
+              <div class="portfolio-layer">
+                <h4>JavaScript</h4>
+                <p>This is my collection of my full JavaScript activity</p>
+                <a href="https://github.com/robertIT1A/java_rice"
+                  ><i class="bx bx-link-external"></i
+                ></a>
+              </div>
+            </div>
+            <!-- 6th -->
+            <div class="portfolio-box slide-in-right">
+              <img src="python.webp" alt="portfolio" />
+              <div class="portfolio-layer">
+                <h4>Python</h4>
+                <p>
+                  Repository of Computer Program developed in Python for our
+                  Subject ITCS102 - First Year First Semester
+                </p>
+                <a
+                  href="https://github.com/robertIT1A/ITCS102-FUNDAMENTALS-PROGRAMMING-PYTHON"
+                  ><i class="bx bx-link-external"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+                   Contact
+    =========================================== -->
+      <section id="contact" class="section fade-in">
+        <div class="container">
+          <h2 class="section-title fade-in">Contact <span>Me</span></h2>
+          <div class="col">
+            <div class="info slide-in-left">
+              <p>
+                If you want to work with me or you want to hire me for some
+                services that I can offer. I'm always open to discussing
+                exciting projects and new opportunities.
+              </p>
+              <h3>
+                <span><i class="bx bx-phone"></i></span> 09673780597
+              </h3>
+              <h3>
+                <span><i class="bx bx-map-pin"></i> </span> robertIT1A
+              </h3>
+              <h3>
+                <span><i class="bx bxl-gmail"></i></span>
+                robertoguevarrabsit1a@gmail.com
+              </h3>
+              <h3>
+                <span><i class="bx bxl-facebook"></i></span> Roberto Guevarra
+                Jr.
+              </h3>
+              <h3>
+                <span><i class="bx bxl-github"></i></span> robertIT1A
+              </h3>
+            </div>
+
+            <div class="info slide-in-right">
+              <form
+                action="https://formspree.io/f/xkogpvkv"
+                method="POST"
+                class="form"
+              >
+                <div class="input-box">
+                  <input name="name" type="text" placeholder=" " required />
+                  <label for="">Full Name</label>
+                  <!-- <input type="text" placeholder="Email Subject" /> -->
+                </div>
+
+                <div class="input-box">
+                  <input
+                    type="email"
+                    name="_replyto"
+                    placeholder=" "
+                    required
+                  />
+                  <label for="">Email Address</label>
+                </div>
+
+                <div class="input-box">
+                  <input type="number" name="number" placeholder=" " required />
+                  <label for="">Mobile Number</label>
+                </div>
+
+                <div class="lagayan">
+                  <div class="gilid">
+                    <textarea
+                      name="message"
+                      id=""
+                      cols="30"
+                      rows="10"
+                      placeholder="Your Message"
+                      required
+                    ></textarea>
+                    <input type="submit" value="Send" class="btn" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>January©2026</p>
+      <p>IT PARADIGM</p>
+      <p>
+        This Profile Webpage is generated by Roberto B. Guevarra Jr. Junior
+        Developer from Dalubhasan ng Lungsod ng Lucena
+      </p>
+    </footer>
+  </body>
+  <!-- ==========================================
+                   Typed Js
+    =========================================== -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="main.js"></script>
+  <!-- 3d -->
+  <script
+    type="module"
+    src="https://unpkg.com/@splinetool/viewer@1.12.29/build/spline-viewer.js"
+  ></script>
+</html>
