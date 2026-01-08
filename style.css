@@ -180,7 +180,7 @@ display: flex;
     position: fixed;
     z-index: 1000;
     top: 20%;
-    left: 45%;
+    left: 43%;
     width: 400px;
     height: 440px;
     background: transparent;
@@ -480,15 +480,42 @@ height: 200px;
               Sercives
 =========================================== */
 .services {display: flex;justify-content: center;align-items: center;gap: 5rem;}
-.tools{position: relative; display: flex;flex-direction: column;justify-content: center;align-items: center;border: 0.1rem solid var(--main-color);border-radius: 10px;width: 25rem;height: 250px;padding: 1rem;gap: 0.5rem;margin-bottom: 1rem;}
-.tools:hover{box-shadow: 0 0 1rem var(--main-color);}
-.tools p{ text-align: center; }
-.pic i {font-size: 50px;color: var(--main-color)}
+.tools{position: relative; display: flex;flex-direction: column;justify-content: center;align-items: center;;border-radius: 10px;width: 25rem;height: 250px;padding: 1rem;gap: 0.5rem;margin-bottom: 1rem;overflow: hidden;}
+.tools:hover {
+    box-shadow: 0 0 20px var(--main-color);
+    transition: 0.3s ease;
+}
+.tools p{ text-align: center;z-index: 1; }
+.pic{z-index: 1;}
+.pic i {font-size: 50px;color: var(--main-color);}
 
 
+.tools::before {
+    content: "";
+    position: absolute;
+    width: 150%; 
+    height: 150%;
+    background: conic-gradient(#00fbff, #0044ff, transparent, transparent, #00fbff);
+    animation: rotate 4s linear infinite;
+    z-index: 0;
+}
 
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 
-
+.tools::after {
+    content: "";
+    position: absolute;
+    inset: 3px; 
+    background-color: var(--bg-color); 
+    border-radius: 8px;
+}
 
 
 /* ==========================================
@@ -497,8 +524,8 @@ height: 200px;
 .portfolio {
   background: var(--second-bg-color);
   height: 850px;
-  
 }
+
 
 .portfolio h2 {
   margin-top: 15rem;
@@ -746,6 +773,8 @@ footer {
   align-items: center;
   flex-direction: column;
   background-color: var(--second-bg-color);
+  padding: 1rem;
+  gap: 5px;
 }
 
 
@@ -825,6 +854,11 @@ footer {
 
 .btn {width: 200px;}
 }
+.wrapper {
+        /* width: 90%; */
+        left: 35%; 
+    }
+
 
 /* Mobile Devices (Max 768px) */
 @media (max-width: 768px) {
