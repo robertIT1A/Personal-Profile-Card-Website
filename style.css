@@ -178,7 +178,7 @@ display: flex;
 =========================================== */
 .wrapper {
     position: fixed;
-    z-index: 1000;
+    z-index: 1002;
     top: 20%;
     left: 43%;
     width: 400px;
@@ -523,33 +523,40 @@ height: 200px;
 =========================================== */
 .portfolio {
   background: var(--second-bg-color);
-  height: 850px;
+  min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 
 .portfolio h2 {
-  margin-top: 15rem;
+  /* margin-top: 15rem; */
   padding-top: 5rem;
   margin-bottom: 5rem;
 }
 
 .portfolio-container {
-  display: grid;
-  height: 450px;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 17rem;
+display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;    
+    justify-items: center;
+  
 }
 
 .portfolio-container .portfolio-box {
   position: relative;
-  width: 464px;
-  height: 300px;
-  border-radius: 2rem;
-  box-shadow: 0 0 1rem var(--bg-color);
-  overflow: hidden;
-  display: flex;
+    width: 100%;     
+    max-width: 400px; 
+    aspect-ratio: 16 / 10; 
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
 }
 
 .portfolio-box img {
@@ -614,9 +621,6 @@ height: 200px;
     =========================================== --> */
 
 .input-box input {
-  /* padding: 1rem;
-  background-color: var(--second-bg-color);
-  /* display: flex; */
   width: 100%;
   border-radius: 50px;
   /* color: var(--main-color);  */
@@ -705,7 +709,6 @@ height: 200px;
   padding: 15px;
   gap: 1rem;
   border-radius: 100px;
-  /* Outer frame shadow */
   box-shadow: 5px 9px 10px var(--madilim), 
               -5px -9px 10px var(--pinakamadilim);
 
@@ -719,7 +722,6 @@ height: 200px;
   border-radius: 10px 50px 1px;
   border: none;
   background-color: var(--main-color);
-  /* Inset shadow makes it look sunken */
   box-shadow: inset 6px 6px 10px var(--madilim), 
               inset -6px -6px 10px var(--pinakamadilim);
 }
@@ -824,6 +826,68 @@ footer {
     transform: translateX(0);
 }
 
+ /* ==========================================
+             All
+=========================================== */
+
+main,header {
+  opacity: 0;
+  animation: content-fade-in 1s ease-out forwards 4s;
+}
+@keyframes content-fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+ /* ==========================================
+             Intro
+=========================================== */
+.intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  animation: fade-out-bg 0.8s ease-in-out forwards 3.5s;
+}
+
+@keyframes fade-out-bg {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}
+
+.preloading {
+  perspective: 1000px;
+}
+
+.logo-intro {
+  font-size: 8rem;
+  font-weight: 900;
+  color: white;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-shadow: 
+    0 0 10px rgba(0, 251, 255, 0.8),
+    0 0 20px rgba(0, 251, 255, 0.5),
+    0 0 40px rgba(0, 251, 255, 0.3);
+  
+  animation: netflix-intro 4s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+  transform-origin: center;
+}
+
+@keyframes netflix-intro {
+  0% { transform: scale(1.2); opacity: 0; letter-spacing: 20px; filter: blur(10px); }
+  20% { opacity: 1; filter: blur(0px); }
+  70% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(15); opacity: 0; letter-spacing: 2px; }
+}
+
 
 
  /* ==========================================
@@ -853,11 +917,13 @@ footer {
     textarea{width: 200px;}
 
 .btn {width: 200px;}
-}
 .wrapper {
         /* width: 90%; */
         left: 35%; 
     }
+}
+
+ 
 
 
 /* Mobile Devices (Max 768px) */
