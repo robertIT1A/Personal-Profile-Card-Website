@@ -119,7 +119,7 @@ sections.forEach((section) => {
     Typed Js 
 ====================== */
 const typed = new Typed(".multiple-text", {
-  strings: ["Junior Web Developer", "Always Here", "Always Love You"],
+  strings: ["Junior Web Developer", "Dalubcenian", "Always Love You"],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
