@@ -1029,4 +1029,7 @@ main,header {
   font-size: 1rem;
   margin-left: 1rem;
     }
+    .logo-intro {
+      font-size: 3rem;
+    }
 }
